@@ -1,0 +1,19 @@
+https://github.com/MattGeller/BeSmartee_Challenge
+1. Using SimpleXML to create a request XML 
+	https://stackoverflow.com/questions/143122/using-simplexml-to-create-an-xml-object-from-scratch?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+2. Using SimpleXML's xpath function to parse a response XML 
+	https://www.w3schools.com/php/php_ref_simplexml.asp
+
+3. Using cURL to submit request XML as POST to url endpoint. 
+	http://php.net/manual/en/function.curl-setopt.php
+	
+4. Using Bootstrap to print contents of response XML to table 
+	https://www.bootstrapdash.com/use-bootstrap-with-php/
+	https://stackoverflow.com/questions/18697422/send-xml-data-to-webservice-using-php-curl?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+	https://stackoverflow.com/questions/15679090/send-an-xml-post-request-to-a-web-server-with-curl/15679384#15679384
+
+5. Using Ajax to dynamically load specific HTML embedded inside 
+   response XML to webpage. 
+
+6. Use any php function to save response XML to hard drive.

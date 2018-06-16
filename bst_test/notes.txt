@@ -1,0 +1,12 @@
+-the xml files created for saving xml to hdd portion can be found
+	inside xml_data folder which is inside the server folder
+-'save_response.xml' was the file created for the purpose of the test;
+	'credit_request_test.xml' was just something I made to check my
+	curl request xml
+-'request.xml' and 'response.xml' were what I received with instructions
+
+-inside main.js the initial large chunk of ajax code is what I had for the 
+	test when I finished it on-site
+-the code you see below are minor adjustment I made to add promise functionality
+	after I finished the on-site assessment. The main functionality did not diverge
+	from what has been commented out.

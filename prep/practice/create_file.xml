@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml><h2 class="text-success">XML h2 Test<small>small test</small></h2><table class="table"><thead><tr><th class="text-center">Employee Name</th><th class="text-center text-warning">Supervisor</th></tr></thead></table></xml>

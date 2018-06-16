@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TABLE _name="Employee Table">
+	<TABLE_HEADER _class="font-weight-bold">
+		<TABLE_HEADER_COL _class="text-center" value="_Name">
+		</TABLE_HEADER_COL>
+		<TABLE_HEADER_COL _class="text-center" _value="ID">
+		</TABLE_HEADER_COL>
+		<TABLE_HEADER_COL _class="text-center" _value="Supervisor">
+		</TABLE_HEADER_COL>
+		<TABLE_HEADER_COL _class="text-center" _value="Phone">
+		</TABLE_HEADER_COL>
+	</TABLE_HEADER>
+
+</TABLE>

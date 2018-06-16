@@ -1,0 +1,9 @@
+1. Create a XML request using SimpleXML (sample attached).
+
+2. Submit request to api using CURL: "https://credit.meridianlink.com/inetapi/AU/get_credit_report.aspx" 
+
+3. Save entire XML response to a file on your hard drive.
+
+4. Print all credit liabilities to screen/table with the following columns using bootstrap: name of creditor, date, outstanding balance, monthly payment and account type. 
+
+5. In the table, make the name of credit a link, and when you click on it it should load the html of the entire credit report in a new div below the table using javascript/jquery ­ no reloading the page. Add a clear button to clear the div contents dynamically.  

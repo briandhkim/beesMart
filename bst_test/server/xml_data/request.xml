@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<REQUEST_GROUP MISMOVersionID="2.3.1">
+    <REQUESTING_PARTY _Name="ACG Funding" _StreetAddress="1661 Hanover Road Suite 216" _City="City of Industry" _State="CA" _PostalCode="91748"/>
+    <RECEIVING_PARTY _Name="Credit Plus" _StreetAddress="31550 Winterplace Parkway" _City="Salisbury" _State="MD" _PostalCode="21804" _Identifier="AV"/>
+    <SUBMITTING_PARTY _Name="BeSmartee" _StreetAddress="16892 Bolsa Chica Street 201" _City="Huntington Beach" _State="CA" _PostalCode="92649" LoginAccountIdentifier="besmartee" LoginAccountPassword="263nx848" _Identifier="BeSmartee07272015"/>
+    <REQUEST RequestDatetime="2017-02-16T09:20:59" InternalAccountIdentifier="" LoginAccountIdentifier="TNGUYEN3" LoginAccountPassword="CHECKm@te1">
+        <REQUEST_DATA>
+            <CREDIT_REQUEST>
+                <MISMOVersionID>2.3.1</MISMOVersionID>
+                <LenderCaseIdentifier>LME8BW68</LenderCaseIdentifier>
+                <RequestingPartyRequestedByName>Benson Pang</RequestingPartyRequestedByName>
+                <CREDIT_REQUEST_DATA CreditRequestID="CreditRequest1" BorrowerID="Borrower" CreditReportRequestActionType="Submit" CreditReportType="Merge" CreditRequestType="Individual" CreditRequestDateTime="2017-02-16T09:20:59">
+                    <CREDIT_REPOSITORY_INCLUDED _EquifaxIndicator="Y" _ExperianIndicator="Y" _TransUnionIndicator="Y"/>
+                </CREDIT_REQUEST_DATA>
+                <LOAN_APPLICATION>
+                    <BORROWER BorrowerID="Borrower" _FirstName="Tim" _LastName="Testcase" _BirthDate="1999-01-01" _HomeTelephoneNumber="714-235-7114" _SSN="123456789" _PrintPositionType="Borrower">
+                        <_RESIDENCE _StreetAddress="4053 Aladdin Dr" _City="Huntington Beach" _State="CA" _PostalCode="92649" BorrowerResidencyType="Current"/>
+                    </BORROWER>
+                </LOAN_APPLICATION>
+            </CREDIT_REQUEST>
+        </REQUEST_DATA>
+    </REQUEST>
+</REQUEST_GROUP>
