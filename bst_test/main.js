@@ -59,8 +59,11 @@ function loadTable(){
 	};
 	$.ajax({
 		type: 'GET',
-		url: 'server/request_curl.php',
-		dataType: 'xml',
+		url: 'server/access.php',
+		dataType: 'json',
+		data:{
+			action: 'load_liability_data'
+		},
 		success: function(resp){
 			promise.resolve(resp);
 		},
@@ -71,14 +74,19 @@ function loadTable(){
 	return promise;
 }
 function loadTableSuccess(response){
-	const responseTable = $('<div>').append($(response).find('table')).html();
-	$('#liabilityTable').append(responseTable);
-	if($('.openReport')){
-		$('.openReport').on('click',()=>{
-			getCreditReport().then(getCreditReportSuccess, getCreditReportError);
+	// console.log(response.data);
+	if(response.success){
+		const tableXML = response.data;
+		const responseTable = $('<div>').append($(tableXML).find('table')).html();
+		$('#liabilityTable').append(responseTable);
+		if($('.openReport')){
+			$('.openReport').on('click',()=>{
+				getCreditReport().then(getCreditReportSuccess, getCreditReportError);
 
-		});
+			});
+		}
 	}
+
 }
 function loadTableError(err){
 	console.log('error loading credit liabilities table: ', err);
@@ -94,8 +102,11 @@ function getCreditReport(){
 	};
 	$.ajax({
 		type: 'GET',
-		url: 'server/load_credit_report.php',
-		dataType: 'html',
+		url: 'server/access.php',
+		dataType: 'json',
+		data:{
+			action: 'load_credit_report'
+		},
 		success: function(data){
 			promise.resolve(data);
 		},
@@ -106,18 +117,24 @@ function getCreditReport(){
 	return promise;
 }
 function getCreditReportSuccess(data){
-	let parse = new DOMParser();
-	let reportResp = parse.parseFromString(data, 'text/html');
-	$(reportResp).find('body').appendTo('#creditReport');
+	if(data.success){
+		// console.log(data);
+		const htmlStr = data.data;
 
-	//clear button handler assigned only when credit report is opened
-	if( $('#creditReport').children() ){
-		$('.clearReportBtn').on('click',()=>{
-			$('#creditReport').children().remove();
-			//clear button function after closing
-			$('.clearReprotBtn').off('click');
-		});
-	}							
+		let parse = new DOMParser();
+		let reportResp = parse.parseFromString(htmlStr, 'text/html');
+		$(reportResp).find('body').appendTo('#creditReport');
+
+		//clear button handler assigned only when credit report is opened
+		if( $('#creditReport').children() ){
+			$('.clearReportBtn').on('click',()=>{
+				$('#creditReport').children().remove();
+				//clear button function after closing
+				$('.clearReprotBtn').off('click');
+			});
+		}			
+	}
+					
 }
 function getCreditReportError(err){
 	console.log('error getting credit report:', err);

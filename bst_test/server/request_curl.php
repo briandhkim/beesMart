@@ -1,4 +1,8 @@
 <?php
+if(empty($local_access)){
+	die('no direct access');
+}
+
 $credit_request = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?> <REQUEST_GROUP mismovERSIONid="2.3.1"></REQUEST_GROUP>');
 
 // 	REQUESTING/RECEIVING/SUBMITTING
@@ -90,6 +94,7 @@ curl_close($ch);
 //this was to compensate for receiving null from curl request
 if(!$resp){
 	$resp = simplexml_load_file('xml_data/response.xml') or die('Error loading xml');
+	// $return_data['errors'][] = 'Error with curl execution';
 }
 // print_r($resp);
 //end of #2 submit request to APi using curl
@@ -143,6 +148,7 @@ foreach($cred_liabilties as $lib){
 	$bodyRow->addChild('td', $accountType);
 }
 
-print($liability_response->asXML());
+$return_data['success'] = true;
+$return_data['data'] = $liability_response->asXML();
 
 ?>
